@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎨 Pixel Painter Battle</title>
+  <link rel="stylesheet" href="catch-fruit.css" />
+</head>
+<body>
+  <h1>🎨 Pixel Painter Battle</h1>
+  <p>Click to paint blue 💙. Freeze bot or win with speed!</p>
+  <div id="score">You: 0 | Bot: 0 | Time: 60s</div>
+  <div id="grid"></div>
+
+  <!-- Hidden form to pass result to result.html -->
+  <form id="resultForm" action="result.html" method="GET" class="hidden">
+    <input type="hidden" name="result" id="resultType">
+    <input type="hidden" name="playerScore" id="playerScore">
+    <input type="hidden" name="botScore" id="botScore">
+  </form>
+
+  <script src="catch-fruit.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+  background: linear-gradient(120deg, #f0f8ff, #d1c4e9, #f8bbd0);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 4px;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: transform 0.1s ease;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+}
+
+.cell.player {
+  background-color: #42a5f5;
+  color: white;
+}
+
+.cell.bot {
+  background-color: #ef5350;
+  color: white;
+}
+
+.cell.freeze {
+  background-color: #80deea;
+  font-weight: bold;
+}
+
+#score {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
